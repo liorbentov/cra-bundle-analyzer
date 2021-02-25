@@ -21,7 +21,8 @@ async function main() {
   const config = webpackConfig("production");
   config.plugins.push(
     new BundleAnalyzerPlugin({
-      analyzerMode: "static",
+      analyzerMode: "disabled",
+      generateStatsFile: true,
       reportFilename: args.reportFilename,
     })
   );
